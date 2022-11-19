@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'myapp/base.html' %}
+{% block myhdg %}
+    <div>
+        <h1> Hello PyDevs</h1>
+    </div>
+{% endblock %}
+{% block title %}
+    Product Detail
+{% endblock %}
+{% block body_block %}
+    {% if prod_obj %}
+    <h2>Product selected:  {{ prod_obj.name }}</h2>
+    <p>Name: {{ prod_obj.name}}</p>
+    <p>Price: {{ prod_obj.price }}</p>
+    <p>Interested: {{ prod_obj.interested }}</p>
+    <p>Stock: {{ prod_obj.stock }}</p>
+    <p>Category: {{ prod_obj.category }}</p>
+    {% else %}
+        <strong>Error in product number!</strong>
+    {% endif %}
+    <form  action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details of Product</title>
+</head>
+<body>
+
+</body>
+</html>

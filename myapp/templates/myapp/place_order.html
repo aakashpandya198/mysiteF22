@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'myapp/base.html' %}
+{% block myhdg %}
+    <div>
+        <h1> Hello PyDevs</h1>
+    </div>
+{% endblock %}
+{% block title %}
+    Place Order
+{% endblock %}
+{% block body_block %}
+    {% if prodlist %}
+    <h2>List of Products</h2>
+    <ol>
+        {% for prod in prodlist %}
+            <li> Name: {{ prod.name }} <br> Price: {{ prod.price }}</li>
+        {% endfor %}
+    </ol>
+
+    {% else %}
+        <strong>There are no available products!</strong>
+    {% endif %}
+    <form action="place_order" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+{#    <p><a href="{% url 'myapp:index' %}"> Index page </a></p>#}
+{% endblock %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Place an order</title>
+</head>
+<body>
+
+</body>
+</html>

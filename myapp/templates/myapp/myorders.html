@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'myapp/base.html' %}
+{% block myhdg %}
+    <div>
+        <h1> Hello PyDevs</h1>
+    </div>
+{% endblock %}
+{% block title %}
+    Order Detail
+{% endblock %}
+{% block body_block %}
+    {% if orderobj %}
+    <ol>
+        {% for x in orderobj %}
+            <li> {{ x.client }} </li>
+            <li> {{ x.product.name }} </li>
+            <li> {{ x.order_choices }} </li>
+            <li> {{ x.order_status }} </li>
+            <li> {{ x.status_date }} </li>
+        {% endfor %}
+    </ol>
+    {% else %}
+        <strong>There are no orders!</strong>
+    {% endif %}
+
+{% endblock %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details of Product</title>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'myapp/base.html' %}
+{% block myhdg %}
+    <div>
+        <h1> Hello PyDevs</h1>
+    </div>
+{% endblock %}
+{% block title %}
+    Product list
+{% endblock %}
+{% block body_block %}
+    {% if prodlist %}
+    <h2>List of Products</h2>
+    <ol>
+        {% for prod in prodlist %}
+            <li> {{ prod.name}} </li>
+        {% endfor %}
+    </ol>
+
+    {% else %}
+        <strong>There are no available products!</strong>
+    {% endif %}
+    <p><a href="{% url 'myapp:place_order' %}"> Click to place an order </a></p>
+{% endblock %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of available products</title>
+</head>
+<body>
+
+</body>
+</html>

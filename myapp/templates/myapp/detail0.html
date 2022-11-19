@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details of the category</title>
+</head>
+<body>
+    <h2>Category selected:  {{ cat_obj.name }}</h2>
+    <p>Name: {{ cat_obj.name}}</p>
+    <p>Warehouse: {{ cat_obj.name}}</p>
+    {% if prod_obj %}
+    <h2>List of Products</h2>
+    <ol>
+        {% for prod in prod_obj %}
+            <li> {{ prod.name}} </li>
+        {% endfor %}
+    </ol>
+
+    {% else %}
+        <strong>There are no available products!</strong>
+    {% endif %}
+    <p><a href="{% url 'myapp:index' %}"> Index page </a></p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'myapp/base.html' %}
+{% block myhdg %}
+    <div>
+        <h1> Hello PyDevs</h1>
+    </div>
+{% endblock %}
+{% block title %}
+    Order Response
+{% endblock %}
+{% block body_block %}
+
+    <h2>Order details</h2>
+    <p> {{ msg.capitalize }}</p>
+{#    <p><a href="{% url 'myapp:index' %}"> Index page </a></p>#}
+{% endblock %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Details</title>
+</head>
+<body>
+
+</body>
+</html>

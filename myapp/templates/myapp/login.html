@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'myapp/base.html' %}
+{% block myhdg %}
+    <div>
+        <h1> Hello PyDevs</h1>
+    </div>
+{% endblock %}
+{% block title %}
+    Login Page
+{% endblock %}
+{% block body_block %}
+    <h1> Welcome! Login to continue to homepage
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <p>
+            <label for="username">Username:</label>
+            <input type="text" value="" placeholder="Username" id="username" name="username">
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" value="" placeholder="Password" id="password" name="password">
+        </p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+{#    <p><a href="{% url 'myapp:index' %}"> Index page </a></p>#}
+{% endblock %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+
+</body>
+</html>

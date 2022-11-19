@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'myapp/base.html' %}
+{% block myhdg %}
+    <div>
+        <h1> Hello PyDevs</h1>
+    </div>
+{% endblock %}
+{% block title %}
+    About Page
+{% endblock %}
+{% block body_block %}
+    <p> <h1>This is an About Page</h1></p>
+    <p> Number of times this page has been visited: {{ about_visits }}</p>
+{#    <p><a href="/myapp">Index page</a></p>#}
+{#    <p><a href="{% url 'myapp:index' %}"> Index page </a></p>#}
+{% endblock %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Page</title>
+</head>
+<body>
+
+</body>
+</html>

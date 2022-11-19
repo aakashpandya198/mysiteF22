@@ -1,0 +1,31 @@
+body
+{
+    background-color: darkorange;
+    color: darkblue;
+}
+.hbar1
+{
+    display: inline;
+    margin: 15px;
+}
+h1
+{
+    color: darkred;
+    font-size: xx-large;
+    font-style: italic;
+    text-align: center;
+}
+p
+{
+    color: darkgreen;
+    font-size: xx-large;
+    font-style: oblique;
+    text-align: center;
+}
+h2
+{
+    color: darkgreen;
+    font-style: italic;
+    font-size: xx-large;
+    text-align: left;
+}
